@@ -231,8 +231,8 @@ form section {
 
 /*These are CSS styling classes for the navigation bar*/
 .main-navbar {
-    background-color: #08415c;
-    color: #000;
+    background-color: #F4AA00;
+    color: #FFFFFF;
     padding: 5px;
     font: bold 26px 'Open Sans', sans-serif;
     font-kerning: auto;
