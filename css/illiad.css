@@ -174,15 +174,15 @@ form section {
     border: none;
     margin: 10px 0;
 }
-
+/* primary button includes logon button*/
 .btn-primary {
-    background-color: #08415c;
+    background-color: #660000;
     color: #fff;
     margin: 10px 5px 10px 0;
 }
 
 .btn-primary:disabled {
-    background-color: #08415c;
+    background-color: #660000;
 }
 
 .btn-secondary {
@@ -192,8 +192,8 @@ form section {
 }
 
 .btn-primary:hover {
-    background-color: #52b3d9;
-    color: #05171f;
+    background-color: #E55545;
+    color: #660000;
     text-decoration: underline;
 }
 
