@@ -12,7 +12,7 @@ body {
 
 /*These are CSS classes for the headers*/
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Duplicate Ionic Web",Georgia,Times,serif;
 }
 
 h1,h2,h3,h4,h5 {
@@ -234,7 +234,8 @@ form section {
     background-color: #F4AA00;
     color: #000000;
     padding: 5px;
-    font: bold 26px 'Open Sans', sans-serif;
+    font: bold 26px;
+    font-family: "Duplicate Ionic Web",Georgia,Times,serif;
     font-kerning: auto;
 }
 
