@@ -197,8 +197,8 @@ form section {
 
 .btn-primary:hover {
     background-color: #E55545;
-    color: #660000;
-    text-decoration: underline;
+    color: #000000;
+    text-decoration: none;
 }
 
 .btn-secondary:hover, .dropdown-item:focus, .dropdown-item:not(.disabled):hover {
