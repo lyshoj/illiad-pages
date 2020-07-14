@@ -7,7 +7,7 @@ Copyright 2020 Atlas Systems, Inc. http://www.atlas-sys.com
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "proxima-nova","Helvetica Neue",Arial,sans-serif;
 }
 
 /*These are CSS classes for the headers*/
@@ -241,6 +241,7 @@ form section {
     font: bold 26px;
     font-family: "Duplicate Ionic Web",Georgia,Times,serif;
     font-kerning: auto;
+    text-transform: uppercase;
 }
 
 nav li {
