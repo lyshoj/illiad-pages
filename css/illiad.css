@@ -243,8 +243,6 @@ form section {
     font-kerning: auto;
 }
 
-}
-
 /*nav li are the top menu items*/
 nav li {
     margin: 0px 0px 0px 12px;
@@ -253,6 +251,13 @@ nav li {
 nav li a {
     font: bolder 18px 'Open Sans', sans-serif;
     text-decoration: none;
+}
+
+/*TEST!*/
+
+nav li a:hover {
+    color: #000000;
+    text-decoration: underline;
 }
 
 .navbar-dark .navbar-nav .nav-link {
