@@ -202,9 +202,9 @@ form section {
 }
 
 .btn-secondary:hover, .dropdown-item:focus, .dropdown-item:not(.disabled):hover {
-    background-color: #a4a5a5;
-    color: #05171f;
-    text-decoration: underline;
+    background-color: #66000;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .badge-primary {
@@ -241,7 +241,6 @@ form section {
     font: bold 26px;
     font-family: "Duplicate Ionic Web",Georgia,Times,serif;
     font-kerning: auto;
-    text-transform: uppercase;
 }
 
 nav li {
