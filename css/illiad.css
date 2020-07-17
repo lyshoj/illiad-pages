@@ -243,13 +243,15 @@ form section {
     font-kerning: auto;
 }
 
-/*test!*/
-.main-navbar:hover {
-    background-color: #FFC642;
 }
 
+/*I think nav li is the top menu*/
 nav li {
     margin: 0px 0px 0px 12px;
+}
+
+nav li:hover {
+    background-color: #FFC642;
 }
 
 nav li a {
