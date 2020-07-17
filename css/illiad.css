@@ -252,6 +252,7 @@ nav li {
 
 nav li:hover {
     background-color: #FFC642;
+    color: #000000;
 }
 
 nav li a {
