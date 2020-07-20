@@ -296,11 +296,95 @@
 						<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control" value="<#PARAM name='Notes'>"></textarea>
 					</div>
 				</section>
-				<#INCLUDE filename="include_request_cited.html">                
+				<!--
+				<#INCLUDE filename="include_request_cited.html">
+-->
+				
+<!--
+<section name="request-citation-info">
+	<h2 class="page-header">Where did you learn about this item?</h2>
+	<div class="form-group col-md-9">
+		<label for="CitedIn">
+			<span class="field">
+				<span class="<#ERROR name='ERRORCitedIn'>">  
+					Where did you find this item cited?
+				</span>
+				<br/>
+				<span class="small-notes">
+					Examples are Dissertation Abstracts, Dialog (specify which database), or a specific journal or book.
+				</span>
+			</span>	
+		</label>
+		<input type="text" class="form-control" name="CitedIn" id="CitedIn" value="<#PARAM name='CitedIn'>">
+	</div>
+	<div class="form-group col-md-9">
+		<label for="CitedDate">
+			<span class="field">
+				<span class="<#ERROR name='ERRORCitedDate'>">
+					  Date of the work that cited the item.
+				</span>
+				</br>
+				<span class="small-notes">
+					(MM/DD/YYYY)
+				</span>
+			</span>
+		</label>
+		<input type="text" class="form-control" name="CitedDate" id="CitedDate" value="<#PARAM name='CitedDate'>">
+	</div>
+	<div class="form-group col-md-9">
+		<label for="CitedVolume">
+			<span class="field">
+				<span class="<#ERROR name='ERRORCitedVolume'>">  
+					Volume number of the work that cited the item.   
+				</span>
+			</span>
+		</label>
+		<input type="text" class="form-control" name="CitedVolume" id="CitedVolume" value="<#PARAM name='CitedVolume'>">
+	</div>
+	<div class="form-group col-md-9">
+		<label for="CitedPages">
+			<span class="field">
+				<span class="<#ERROR name='ERRORCitedPages'>">  
+					Pages where the item is cited.
+				</span>
+			</span>
+		</label>
+		<input type="text" class="form-control" name="CitedPages" id="CitedPages" value="<#PARAM name='CitedPages'>">
+	</div>
+</section>
+-->
+
+<input type="hidden" name="CitedIn" value="<#PARAM name='CitedIn'>">
+<input type="hidden" name="CitedDate" value="<#PARAM name='CitedDate'>">
+<input type="hidden" name="CitedVolume" value="<#PARAM name='CitedVolume'>">
+<input type="hidden" name="CitedPages" value="<#PARAM name='CitedPages'>">
+				<!--END include citation-->
+				<!--
 				<#INCLUDE filename="include_request_buttons.html">
+-->
+				<button class="btn btn-primary btn-md" type="submit" id="buttonSubmitRequest" name="SubmitButton" value="Submit Request">Submit Request</button>
+	<button class="btn btn-secondary btn-md" type="reset" id="buttonReset" name="ResetButton" value="Clear Form" tabindex="201">Clear form</button>
+	<button class="btn btn-secondary btn-md" type="submit" role="button" id="buttonCancel" name="SubmitButton" value="Cancel - Return to Main Menu">Cancel - Return to Main Menu</button>
+				<!-- END request buttons-->
 			</fieldset>
 		</form>		
+		<!--
 		<#INCLUDE filename="include_footer.html">
+-->
+		<footer class="foot">
+    <span class="new-line">
+        Powered by
+        <a href="<#ACTION action='10' form='1'>">ILLiad </a>
+    </span>
+    <span class="new-line">
+        &copy; 2020
+        <a href="http://www.atlas-sys.com"> Atlas Systems, Inc.</a> All Rights Reserved.
+    </span>
+    <span class="new-line">
+        <a href="<#ACTION action='10' form='3'>">Site Map </a>
+    </span>
+</footer>
+		<!-- END footer -->
 	</div>    
 </body>
 </html>
