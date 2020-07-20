@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>ILLiad - Article Request</title>
+	<#INCLUDE filename="include_head.html">
+</head>
+
+<body>
+<!--
+    <#INCLUDE filename="include_header.html">
+-->
+<div id="header">
+  <div>
+    <a href="#content" accesskey="S" onclick="$('#content').focus();" class="offscreen">Skip to Main Content</a>
+  </div>
+  <h1>
+      ILLiad
+  </h1>
+</div><div id="header">
+  <div>
+    <a href="#content" accesskey="S" onclick="$('#content').focus();" class="offscreen">Skip to Main Content</a>
+  </div>
+  <h1>
+      ILLiad
+  </h1>
+</div>
+<!-- end include header-->
+<!--    <#INCLUDE filename="include_menu.html">  
+-->
+
+<div id="status" class="container"><#STATUS></div>
+<nav class="main-navbar navbar navbar-expand-lg navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse my-4 justify-content-center" id="navbarNavDropdown">
+
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link" href="<#ACTION action='10' form='10'>">
+          <span aria-hidden="true" class="fas fa-home"></span>  Main Menu</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarNewRequest" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <span aria-hidden="true" class="fas fa-book"></span>   New Requests
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarNewRequest">
+          <a class="dropdown-item" href="<#ACTION action='10' form='22'>">Article</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='21'>">Book</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='23'>">Book Chapter</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='24'>">Conference Paper</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='25'>">Patent</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='26'>">Report</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='27'>">Thesis</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='28'>">Standards Document</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='32'>">Multimedia</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarOrderHistory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span aria-hidden="true" class="fas fa-history"></span>  History
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarOrderHistory">
+          <a class="dropdown-item" href="<#ACTION action='10' form='60'>"><span aria-hidden="true" class="fas fa-list-alt"></span> All Requests</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='70'>"><span aria-hidden="true" class="fas fa-ban"></span> Cancelled Requests</a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='68'>"><span aria-hidden="true" class="fas fa-check-circle"></span> Completed Requests</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="<#ACTION action='10' form='73'>">
+            <span class="far fa-bell"></span>  Notification History
+          </a>
+        </div>                  
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="<#ACTION action='10' form='2' value='ViewSearchResults'>">
+          <span aria-hidden="true" class="fas fa-search"></span>  Search
+        </a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarMyProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span aria-hidden="true" class="fas fa-user"></span> Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarMyProfile">
+          <a class="dropdown-item" href="<#ACTION action='10' form='81'>">
+            <span aria-hidden="true" class="fas fa-user-edit"></span>  Update Profile
+          </a>
+          <a class="dropdown-item" href="<#ACTION action='10' form='83'>">
+            <span aria-hidden="true" class="fas fa-key"></span>  Change Password
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item disabled" type="text">
+            <span class="far fa-id-badge"></span>  Logged in as <#PARAM name='Username'>
+          </a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="<#ACTION action='99'>">
+           <span aria-hidden="true" class="fas fa-sign-out-alt"></span>  Logoff</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="alerts-bar">
+  <div class="container" id="webAlerts"></div>
+</div>
+<!--end include menu and nav-->
+    <div id="content" class="container" role="heading" aria-label="Content">
+        <form action="illiad.dll" method="post" name="ArticleRequest">
+            <input type="hidden" name="ILLiadForm" value="ArticleRequest">
+            <input type="hidden" name="Username" value="<#PARAM name='Username'>">
+            <input type="hidden" name="SessionID" value="<#PARAM name='SessionID'>">
+            <input type="hidden" name="ESPNumber" value="<#PARAM name='ESPNumber'>">
+            <input type="hidden" name="CallNumber" value="<#PARAM name='CallNumber'>">
+            <input type="hidden" name="NotWantedAfter" value="<#PARAM name='NotWantedAfter'>">
+            <#FORMSTATE>
+                
+			<fieldset>	
+
+				<h2 class="page-header">Article Request</h2>
+				
+				<section name="article-info">
+
+					<div class="form-group col-md-9">
+						<label for="PhotoJournalTitle">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoJournalTitle'>">
+									Title (Journal, Conference Proceedings, Anthology)  
+									<span class="req">(required)</span>
+								</span>
+								<br>
+								<span class="small-notes">
+									Please do not abbreviate unless your citation is abbreviated  
+								</span>
+							</span>
+							<br>
+						</label>
+						<input type="text" class="form-control" name="PhotoJournalTitle" id="PhotoJournalTitle" value="<#PARAM name='PhotoJournalTitle'>">	
+					</div>
+
+					<div class="form-group col-md-9">
+						<label for="PhotoArticleTitle">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoArticleTitle'>">
+									Article Title  
+									<span class="req">(required)</span> 
+								</span>	
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoArticleTitle" id="PhotoArticleTitle" value="<#PARAM name='PhotoArticleTitle'>">
+					</div>
+
+					<div class="form-group col-md-9"> 
+						<label for="PhotoArticleAuthor">
+							<span class="field">
+							   <span class="<#ERROR name='ERRORPhotoArticleAuthor'>">
+									Article Author   
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoArticleAuthor" id="PhotoArticleAuthor" value="<#PARAM name='PhotoArticleAuthor'>">
+					</div>
+					
+					<div class="form-group col-md-9">
+						<label for="PhotoJournalVolume">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoJournalVolume'>">
+									Volume
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoJournalVolume" id="PhotoJournalVolume" value="<#PARAM name='PhotoJournalVolume'>">
+					</div>
+							
+					<div class="form-group col-md-9">
+						<label for="PhotoJournalIssue">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoJournalIssue'>">
+									Issue Number or Designation
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoJournalIssue" id="PhotoJournalIssue" value="<#PARAM name='PhotoJournalIssue'>">
+					</div>
+							
+					<div class="form-group col-md-9">
+						<label for="PhotoJournalMonth">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoJournalMonth'>">
+									Month
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoJournalMonth" id="PhotoJournalMonth" value="<#PARAM name='PhotoJournalMonth'>">
+					</div>
+						
+					<div class="form-group col-md-9">
+						<label for="PhotoJournalYear">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoJournalYear'>">
+									Year   
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoJournalYear" id="PhotoJournalYear" value="<#PARAM name='PhotoJournalYear'>">
+					</div>
+				
+					<div class="form-group col-md-9">
+						<label for="PhotoJournalInclusivePages">
+							<span class="field">
+								<span class="<#ERROR name='ERRORPhotoJournalInclusivePages'>">
+									Inclusive Pages   
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="PhotoJournalInclusivePages" id="PhotoJournalInclusivePages" value="<#PARAM name='PhotoJournalInclusivePages'>">
+					</div>
+							
+					<div class="form-group col-md-9">
+						<label for="ISSN">
+							<span class="field">
+								<span class="<#ERROR name='ERRORISSN'>"> 
+									ISSN (International Standard Serial Number)   
+								</span>
+							 <br>
+								<span class="small-notes">
+									If given will speed request processing
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ISSN" id="ISSN" value="<#PARAM name='ISSN'>">
+					</div>
+							
+					<!--<div class="form-group col-md-9">
+						<label for="CallNumber">
+							<span class="field">
+								<span class="<#ERROR name='ERRORCallNumber'>">
+									  Call Number   
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="CallNumber" id="CallNumber" value="<#PARAM name='CallNumber'>">
+					</div>
+				
+					<div class="form-group col-md-9">
+						<label for="ESPNumber">
+							<span class="field">
+								<span class="<#ERROR name='ERRORESPNumber'>">
+									  OCLC or Docline UI Number   
+								</span>
+							</span>
+						</label>
+						<input type="text" class="form-control" name="ESPNumber" id="ESPNumber" value="<#PARAM name='ESPNumber'>">
+					</div>-->
+					   
+					<div class="form-group col-md-9">
+						<label for="Notes">
+							<span class="field">
+								<span class="<#ERROR name='ERRORNotes'>">  
+									Notes   
+								</span><br>
+								<span class="small-notes">
+									Put any information here that may help us find the item, as well as any other pertinent information.</span>
+							</span>
+						</label>
+						<textarea id="Notes" name="Notes" rows="2" cols="40" class="form-control" value="<#PARAM name='Notes'>"></textarea>
+					</div>
+				</section>
+				<#INCLUDE filename="include_request_cited.html">                
+				<#INCLUDE filename="include_request_buttons.html">
+			</fieldset>
+		</form>		
+		<#INCLUDE filename="include_footer.html">
+	</div>    
+</body>
+</html>
